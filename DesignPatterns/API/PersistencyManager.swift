@@ -50,7 +50,7 @@ final class PersistencyManager {
         return albums
     }
 
-    func addAlbum(at index: Int, album: Album) {
+    func add(album: Album, at index: Int) {
         if albums.count >= index {
             albums.insert(album, at: index)
         } else {
@@ -58,7 +58,7 @@ final class PersistencyManager {
         }
     }
 
-    func removeAlbum(at index: Int, album: Album) {
+    func remove(album: Album, at index: Int) {
         albums.remove(at: index)
     }
 }
