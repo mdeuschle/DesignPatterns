@@ -9,7 +9,7 @@
 import Foundation
 
 final class LibraryAPI {
-    let shared = LibraryAPI()
+    static let shared = LibraryAPI()
     private init() {}
     private let persistencyManager = PersistencyManager()
     private let httpClient = HTTPClient()

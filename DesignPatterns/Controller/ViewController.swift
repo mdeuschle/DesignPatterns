@@ -20,6 +20,19 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        albums = LibraryAPI.shared.getAlbums()
+        tableView.dataSource = self
+        showAlbum(at: currentAlbumIndex)
+    }
+
+    private func showAlbum(at index: Int) {
+        if index < albums.count && index >= 0 {
+            let album = albums[index]
+            currentAlbumData = album.tableRepresentation
+        } else {
+            currentAlbumData = nil
+        }
+        tableView.reloadData()
     }
 }
 
