@@ -16,8 +16,9 @@
 		A86332412103F82E006FC819 /* DesignPatternsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86332402103F82E006FC819 /* DesignPatternsUITests.swift */; };
 		A86332532103FE1A006FC819 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86332522103FE1A006FC819 /* Album.swift */; };
 		A863325521040097006FC819 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863325421040097006FC819 /* AlbumView.swift */; };
-		A863325821043D86006FC819 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863325721043D86006FC819 /* Service.swift */; };
+		A863325821043D86006FC819 /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863325721043D86006FC819 /* LibraryAPI.swift */; };
 		A863325A21043E09006FC819 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863325921043E09006FC819 /* PersistencyManager.swift */; };
+		A863325C2104D3F3006FC819 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863325B2104D3F3006FC819 /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +54,9 @@
 		A86332422103F82E006FC819 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A86332522103FE1A006FC819 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		A863325421040097006FC819 /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
-		A863325721043D86006FC819 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		A863325721043D86006FC819 /* LibraryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
 		A863325921043E09006FC819 /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
+		A863325B2104D3F3006FC819 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +107,7 @@
 		A863321F2103F822006FC819 /* DesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
-				A863325621043D77006FC819 /* Service */,
+				A863325621043D77006FC819 /* API */,
 				A86332502103FD0E006FC819 /* Model */,
 				A863324F2103FD0A006FC819 /* View */,
 				A863324E2103FD02006FC819 /* Controller */,
@@ -160,13 +162,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		A863325621043D77006FC819 /* Service */ = {
+		A863325621043D77006FC819 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				A863325721043D86006FC819 /* Service.swift */,
+				A863325721043D86006FC819 /* LibraryAPI.swift */,
 				A863325921043E09006FC819 /* PersistencyManager.swift */,
+				A863325B2104D3F3006FC819 /* HTTPClient.swift */,
 			);
-			path = Service;
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,7 +306,8 @@
 				A86332232103F822006FC819 /* ViewController.swift in Sources */,
 				A863325A21043E09006FC819 /* PersistencyManager.swift in Sources */,
 				A86332212103F822006FC819 /* AppDelegate.swift in Sources */,
-				A863325821043D86006FC819 /* Service.swift in Sources */,
+				A863325C2104D3F3006FC819 /* HTTPClient.swift in Sources */,
+				A863325821043D86006FC819 /* LibraryAPI.swift in Sources */,
 				A863325521040097006FC819 /* AlbumView.swift in Sources */,
 				A86332532103FE1A006FC819 /* Album.swift in Sources */,
 			);

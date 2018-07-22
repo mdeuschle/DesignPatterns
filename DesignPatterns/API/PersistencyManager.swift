@@ -58,7 +58,7 @@ final class PersistencyManager {
         }
     }
 
-    func deleteAlbum(at index: Int) {
+    func removeAlbum(at index: Int, album: Album) {
         albums.remove(at: index)
     }
 }

@@ -8,8 +8,10 @@
 
 import Foundation
 
-final class Service {
-    let shared = Service()
+final class LibraryAPI {
+    let shared = LibraryAPI()
     private init() {}
-    
+    private let persistencyManager = PersistencyManager()
+    private let httpClient = HTTPClient()
+    private let isOnline = false
 }
