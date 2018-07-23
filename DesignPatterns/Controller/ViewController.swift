@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var undoBarButtonItem: UIBarButtonItem!
     @IBOutlet private weak var trashBarButtonItem: UIBarButtonItem!
-
+    @IBOutlet private weak var horizontalScrollView: HorizontalScrollerView!
+    
     private var currentAlbumIndex = 0
     private var currentAlbumData: [AlbumData]?
     private var albums = [Album]()

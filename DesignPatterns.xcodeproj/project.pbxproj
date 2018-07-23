@@ -19,6 +19,7 @@
 		A863325821043D86006FC819 /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863325721043D86006FC819 /* LibraryAPI.swift */; };
 		A863325A21043E09006FC819 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863325921043E09006FC819 /* PersistencyManager.swift */; };
 		A863325C2104D3F3006FC819 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863325B2104D3F3006FC819 /* HTTPClient.swift */; };
+		A863325E21054F08006FC819 /* HorizontalScrollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863325D21054F08006FC819 /* HorizontalScrollerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		A863325721043D86006FC819 /* LibraryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
 		A863325921043E09006FC819 /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		A863325B2104D3F3006FC819 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		A863325D21054F08006FC819 /* HorizontalScrollerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +150,9 @@
 		A863324F2103FD0A006FC819 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A86332242103F822006FC819 /* Main.storyboard */,
 				A863325421040097006FC819 /* AlbumView.swift */,
+				A863325D21054F08006FC819 /* HorizontalScrollerView.swift */,
+				A86332242103F822006FC819 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			files = (
 				A86332232103F822006FC819 /* ViewController.swift in Sources */,
 				A863325A21043E09006FC819 /* PersistencyManager.swift in Sources */,
+				A863325E21054F08006FC819 /* HorizontalScrollerView.swift in Sources */,
 				A86332212103F822006FC819 /* AppDelegate.swift in Sources */,
 				A863325C2104D3F3006FC819 /* HTTPClient.swift in Sources */,
 				A863325821043D86006FC819 /* LibraryAPI.swift in Sources */,

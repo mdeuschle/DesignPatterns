@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="izg-lg-BcG">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="izg-lg-BcG" customClass="HorizontalScrollerView" customModule="DesignPatterns" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="116" width="375" height="193"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
@@ -84,6 +84,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Rockify" id="Iem-Iv-jlo"/>
                     <connections>
+                        <outlet property="horizontalScrollView" destination="izg-lg-BcG" id="jGh-pj-cNO"/>
                         <outlet property="tableView" destination="FCi-aW-UTe" id="1Ve-SL-mOo"/>
                         <outlet property="trashBarButtonItem" destination="Ro1-te-TzX" id="YqB-cg-keJ"/>
                         <outlet property="undoBarButtonItem" destination="td2-Qk-OBl" id="l3s-i7-91q"/>
