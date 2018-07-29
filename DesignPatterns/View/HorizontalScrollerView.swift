@@ -9,22 +9,19 @@
 import UIKit
 
 protocol HorizontalScrollerViewDataSource: class {
-    func numberOfViews(in horizontalScrollView: HorizontalScrollerView) -> Int
-    func horizontalScrollerView(_ horizontalScrollView: HorizontalScrollerView,
-                                at indexPath: Int) -> UIView
-
+    func numberOfViews(in horizontalScrollerView: HorizontalScrollerView) -> Int
+    func horizontalScrollerViewAt(_ horizontalScrollerView: HorizontalScrollerView,
+                                  atIndex: Int) -> UIView
 }
 
 protocol HorizontalScrollerViewDelegate: class {
-    func horizontalScrollerView(_ horizontalScrollView: HorizontalScrollerView, didSelectViewAt index: Int)
+    func horizontalScrollerView(_ horizontalScrollerView: HorizontalScrollerView,
+                                didSelectViewAt index: Int)
 }
 
 class HorizontalScrollerView: UIView {
     weak var dataSource: HorizontalScrollerViewDataSource?
     weak var delegate: HorizontalScrollerViewDelegate?
-
-    private let scrollView = UIScrollView()
-    private var contentViews = [UIView]()
 
     private enum ViewConstants {
         static let padding: CGFloat = 10
@@ -32,11 +29,16 @@ class HorizontalScrollerView: UIView {
         static let offSet: CGFloat = 100
     }
 
+    private let scrollView = UIScrollView()
+    private var contentViews = [UIView]()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
+        initScrollView()
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        initScrollView()
     }
 
     func initScrollView() {
@@ -81,7 +83,7 @@ class HorizontalScrollerView: UIView {
         var xValue = ViewConstants.offSet
         contentViews = (0..<dataSource.numberOfViews(in: self)).map { index in
             xValue += ViewConstants.padding
-            let view = dataSource.horizontalScrollerView(self, at: index)
+            let view = dataSource.horizontalScrollerViewAt(self, atIndex: index)
             view.frame = CGRect(x: CGFloat(xValue),
                                 y: ViewConstants.padding,
                                 width: ViewConstants.dimensions,

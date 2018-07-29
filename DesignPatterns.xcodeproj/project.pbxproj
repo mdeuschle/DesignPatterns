@@ -20,6 +20,7 @@
 		A863325A21043E09006FC819 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863325921043E09006FC819 /* PersistencyManager.swift */; };
 		A863325C2104D3F3006FC819 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863325B2104D3F3006FC819 /* HTTPClient.swift */; };
 		A863325E21054F08006FC819 /* HorizontalScrollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A863325D21054F08006FC819 /* HorizontalScrollerView.swift */; };
+		A8F95025210D6661008102BC /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95024210D6661008102BC /* NotificationExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		A863325921043E09006FC819 /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		A863325B2104D3F3006FC819 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		A863325D21054F08006FC819 /* HorizontalScrollerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollerView.swift; sourceTree = "<group>"; };
+		A8F95024210D6661008102BC /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		A863321F2103F822006FC819 /* DesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				A8F95023210D65FB008102BC /* Extension */,
 				A863325621043D77006FC819 /* API */,
 				A86332502103FD0E006FC819 /* Model */,
 				A863324F2103FD0A006FC819 /* View */,
@@ -173,6 +176,14 @@
 				A863325B2104D3F3006FC819 /* HTTPClient.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		A8F95023210D65FB008102BC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A8F95024210D6661008102BC /* NotificationExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +320,7 @@
 				A86332232103F822006FC819 /* ViewController.swift in Sources */,
 				A863325A21043E09006FC819 /* PersistencyManager.swift in Sources */,
 				A863325E21054F08006FC819 /* HorizontalScrollerView.swift in Sources */,
+				A8F95025210D6661008102BC /* NotificationExtension.swift in Sources */,
 				A86332212103F822006FC819 /* AppDelegate.swift in Sources */,
 				A863325C2104D3F3006FC819 /* HTTPClient.swift in Sources */,
 				A863325821043D86006FC819 /* LibraryAPI.swift in Sources */,

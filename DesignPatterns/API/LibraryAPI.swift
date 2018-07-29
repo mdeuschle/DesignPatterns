@@ -10,10 +10,19 @@ import Foundation
 
 final class LibraryAPI {
     static let shared = LibraryAPI()
-    private init() {}
+    private init() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(downloadImage(with:)), name: .BLDownloadImage,
+                                               object: nil)
+
+    }
     private let persistencyManager = PersistencyManager()
     private let httpClient = HTTPClient()
     private let isOnline = false
+
+    @objc func downloadImage(with notification: Notification) {
+
+    }
 
     func getAlbums() -> [Album] {
         return persistencyManager.getAlbums()

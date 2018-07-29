@@ -81,10 +81,10 @@ extension ViewController: HorizontalScrollerViewDataSource {
         return albums.count
     }
 
-    func horizontalScrollerView(_ horizontalScrollerView: HorizontalScrollerView, at index: Int) -> UIView {
-        let album = albums[index]
+    func horizontalScrollerViewAt(_ horizontalScrollerView: HorizontalScrollerView, atIndex: Int) -> UIView {
+        let album = albums[atIndex]
         let albumView = AlbumView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), coverUrl: album.coverUrl)
-        if currentAlbumIndex == index {
+        if currentAlbumIndex == atIndex {
             albumView.highlightAlbum(true)
         } else {
             albumView.highlightAlbum(false)

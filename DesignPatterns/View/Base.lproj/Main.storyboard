@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="izg-lg-BcG" customClass="HorizontalScrollerView" customModule="DesignPatterns" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="116" width="375" height="193"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="120"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="TM3-Qx-BPT"/>
+                                    <constraint firstAttribute="height" constant="120" id="TM3-Qx-BPT"/>
                                 </constraints>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sab-eQ-zhM">
@@ -37,7 +37,7 @@
                                 </items>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FCi-aW-UTe">
-                                <rect key="frame" x="0.0" y="309" width="375" height="314"/>
+                                <rect key="frame" x="0.0" y="236" width="375" height="387"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="U4e-qa-eka" detailTextLabel="8ku-Cf-9Yj" rowHeight="80" style="IBUITableViewCellStyleValue1" id="bR1-sb-VIx">
