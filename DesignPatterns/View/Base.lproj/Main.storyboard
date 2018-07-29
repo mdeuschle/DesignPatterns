@@ -84,7 +84,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Rockify" id="Iem-Iv-jlo"/>
                     <connections>
-                        <outlet property="horizontalScrollView" destination="izg-lg-BcG" id="jGh-pj-cNO"/>
+                        <outlet property="horizontalScrollerView" destination="izg-lg-BcG" id="RTD-BO-C0r"/>
                         <outlet property="tableView" destination="FCi-aW-UTe" id="1Ve-SL-mOo"/>
                         <outlet property="trashBarButtonItem" destination="Ro1-te-TzX" id="YqB-cg-keJ"/>
                         <outlet property="undoBarButtonItem" destination="td2-Qk-OBl" id="l3s-i7-91q"/>

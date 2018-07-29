@@ -8,20 +8,20 @@
 
 import UIKit
 
-protocol HorizontalScrollViewDataSource: class {
+protocol HorizontalScrollerViewDataSource: class {
     func numberOfViews(in horizontalScrollView: HorizontalScrollerView) -> Int
     func horizontalScrollerView(_ horizontalScrollView: HorizontalScrollerView,
                                 at indexPath: Int) -> UIView
 
 }
 
-protocol HorizontalScrollViewDelegate: class {
-    func horizontalScrollView(_ horizontalScrollView: HorizontalScrollerView, didSelectViewAt index: Int)
+protocol HorizontalScrollerViewDelegate: class {
+    func horizontalScrollerView(_ horizontalScrollView: HorizontalScrollerView, didSelectViewAt index: Int)
 }
 
 class HorizontalScrollerView: UIView {
-    weak var dataSource: HorizontalScrollViewDataSource?
-    weak var delegate: HorizontalScrollViewDelegate?
+    weak var dataSource: HorizontalScrollerViewDataSource?
+    weak var delegate: HorizontalScrollerViewDelegate?
 
     private let scrollView = UIScrollView()
     private var contentViews = [UIView]()
@@ -67,7 +67,7 @@ class HorizontalScrollerView: UIView {
         guard let index = contentViews.index(where: { $0.frame.contains(location) }) else {
             return
         }
-        delegate?.horizontalScrollView(self, didSelectViewAt: index)
+        delegate?.horizontalScrollerView(self, didSelectViewAt: index)
         scrollToView(at: index)
     }
 
@@ -105,7 +105,7 @@ class HorizontalScrollerView: UIView {
         let targetOffsetX = targetCenter.x - (scrollView.bounds.width / 2)
 
         scrollView.setContentOffset(CGPoint(x: targetOffsetX, y: 0), animated: true)
-        delegate?.horizontalScrollView(self, didSelectViewAt: selectedIndex)
+        delegate?.horizontalScrollerView(self, didSelectViewAt: selectedIndex)
     }
 }
 

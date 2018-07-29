@@ -48,8 +48,8 @@ class AlbumView: UIView {
         NSLayoutConstraint.activate(contraints)
     }
 
-    func highLiteAlbum(_ didHighLiteAlbum: Bool) {
-        backgroundColor = didHighLiteAlbum ? .white : .black
+    func highlightAlbum(_ didHightlightAlbum: Bool) {
+        backgroundColor = didHightlightAlbum ? .white : .black
     }
 }
 
