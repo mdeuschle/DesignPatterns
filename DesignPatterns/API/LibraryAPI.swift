@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class LibraryAPI {
     static let shared = LibraryAPI()
@@ -21,7 +22,23 @@ final class LibraryAPI {
     private let isOnline = false
 
     @objc func downloadImage(with notification: Notification) {
+        guard let userInfo = notification.userInfo,
+        let imageView = userInfo[AlbumView.imageView] as? UIImageView,
+        let coverUrl = userInfo[AlbumView.coverUrl] as? String,
+            let fileName = URL(string: coverUrl)?.lastPathComponent else { return }
 
+        if let savedImage = persistencyManager.getImage(with: fileName) {
+            imageView.image = savedImage
+            return
+        }
+
+        DispatchQueue.global().async {
+            let downloadedImage = self.httpClient.downloadImage(coverUrl) ?? UIImage()
+            DispatchQueue.main.async {
+                imageView.image = downloadedImage
+                self.persistencyManager.saveImage(downloadedImage, fileName: fileName)
+            }
+        }
     }
 
     func getAlbums() -> [Album] {

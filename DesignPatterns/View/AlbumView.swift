@@ -9,16 +9,18 @@
 import UIKit
 
 class AlbumView: UIView {
-    private var coverImageView: UIView!
+    private var coverImageView: UIImageView!
     private var activityIndicatorView: UIActivityIndicatorView!
+    static let imageView = "imageView"
+    static let coverUrl = "coverUrl"
 
     init(frame: CGRect, coverUrl: String) {
         super.init(frame: frame)
         commonInit()
         NotificationCenter.default.post(name: .BLDownloadImage,
                                         object: self,
-                                        userInfo: ["imageView": coverImageView,
-                                                   "coverUrl": coverUrl])
+                                        userInfo: [AlbumView.imageView: coverImageView,
+                                                   AlbumView.coverUrl: coverUrl])
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -28,7 +30,7 @@ class AlbumView: UIView {
 
     private func commonInit() {
         backgroundColor = .black
-        coverImageView = UIView()
+        coverImageView = UIImageView()
         coverImageView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(coverImageView)
 
