@@ -29,6 +29,11 @@ class ViewController: UIViewController {
         showAlbum(at: currentAlbumIndex)
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        horizontalScrollerView.scrollToView(at: currentAlbumIndex, animated: false)
+    }
+
     private func showAlbum(at index: Int) {
         if index < albums.count && index >= 0 {
             let album = albums[index]
@@ -91,6 +96,22 @@ extension ViewController: HorizontalScrollerViewDataSource {
         }
         return albumView
     }
+
+    override func encodeRestorableState(with coder: NSCoder) {
+        coder.encode(currentAlbumIndex, forKey: Constant.indexRestorationKey)
+        super.encodeRestorableState(with: coder)
+    }
+
+    override func decodeRestorableState(with coder: NSCoder) {
+        super.decodeRestorableState(with: coder)
+        currentAlbumIndex = coder.decodeInteger(forKey: Constant.indexRestorationKey)
+        showAlbum(at: currentAlbumIndex)
+        horizontalScrollerView.reload()
+    }
+}
+
+enum Constant {
+    static let indexRestorationKey = "currentAlbumIndex"
 }
 
 
