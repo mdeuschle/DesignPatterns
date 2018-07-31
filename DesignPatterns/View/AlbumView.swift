@@ -11,6 +11,7 @@ import UIKit
 class AlbumView: UIView {
     private var coverImageView: UIImageView!
     private var activityIndicatorView: UIActivityIndicatorView!
+    private var valueObservation: NSKeyValueObservation!
     static let imageView = "imageView"
     static let coverUrl = "coverUrl"
 
@@ -32,6 +33,12 @@ class AlbumView: UIView {
         backgroundColor = .black
         coverImageView = UIImageView()
         coverImageView.translatesAutoresizingMaskIntoConstraints = false
+        valueObservation = coverImageView.observe(\.image,
+                                                  options: [.new]) { [unowned self] observed, change in
+            if change.newValue is UIImage {
+                self.activityIndicatorView.stopAnimating()
+            }
+        }
         addSubview(coverImageView)
 
         activityIndicatorView = UIActivityIndicatorView()
